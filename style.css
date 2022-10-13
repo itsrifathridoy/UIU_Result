@@ -14,7 +14,7 @@
 .error
 {
     color: #fff;
-    font-size: 3em;
+    font-size: 2em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,6 +34,7 @@ button.error
     color: #1d2b3a;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
+    border: none;
 }
 button#btn
 {
@@ -44,9 +45,11 @@ button#btn
     color: #1d2b3a;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
+    border: none;
 }
 button.error:hover,
-button.reset:hover
+button.reset:hover,
+button#btn:hover
 {
     background: #fff;
     color: #1d2b3a;
@@ -239,7 +242,16 @@ table {
     }
   }
   
-
+  @media screen and (max-width: 600px) {
+    img
+    {
+        width: 80%;
+    }
+    #heading
+    {
+        font-size: 1.5em;
+    }
+  }
   
   
   
