@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0; 
+    font-family: 'Poppins', sans-serif;
+}
+.head
+{
+    position: relative;
+    width: 100wh;
+    height: 100vh;
+}
+.error
+{
+    color: #fff;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#head
+{
+    display: none;
+}
+button.error
+{
+    font-size: 1.5em;
+    margin-top: 8%;
+    padding: 5px 15px;
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+button#btn
+{
+    font-size: 1.5em;
+    /* margin-top: 8%; */
+    padding: 5px 15px;
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+button.error:hover,
+button.reset:hover
+{
+    background: #fff;
+    color: #1d2b3a;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+button.reset
+{
+    font-size: 1.5em;
+    margin: 5px 5px;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+button#reset
+{
+    display: block;
+    margin: 0 95%;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    transition: all 0.5s ease-in-out;
+}
+button#reset:hover
+{
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in-out;
+}
+
+
+body
+{
+    background: #1d2b3a;
+}
+body>#container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+}
+input[type=number] 
+{
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.inputBox
+{
+    position: relative;
+    width: 250px;
+}
+.inputBox input
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.inputBox span
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255,255,255,0.25);
+    transition: 0.5s;
+    
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    background: #00dfc4;
+    color: #1d2b3a;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+    border-radius: 3px;
+}
+/* .inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span
+{
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+} */
+.inputBox input:valid,
+.inputBox input:focus
+{
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #fff;
+    color: #1d2b3a;
+}
+#totalStudents
+{
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0px 100px cadetblue;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  tr:nth-child(odd) {
+    background-color: #1d2b3a;
+    color: #fff;
+  }
+
+  #loader{
+    display: none;
+  }
+  .loader {
+    height: 90vh;
+    margin: 25px 5px;
+    justify-content: center;
+    align-content: center;
+  }
+  #results
+  {
+    padding-bottom: 50px;
+  }
+ 
+  .lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: rgb(97, 223, 129) transparent rgb(97, 223, 129) transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
+
+  
+  
+  
