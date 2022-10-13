@@ -108,37 +108,7 @@ function showLoader()
     document.getElementById("heading").textContent = "";
     const resultTable = document.getElementById("resultTable");
     resultTable.innerHTML="";
-    // const loaderTable = document.getElementById("loaderTable");
-    // loaderTable.innerHTML ="";
     const tableHeading = ["ID","GPA","GPA Wise Grade","CGPA","CGPA Wise Grade"];
-//    const tr = document.createElement("tr");
-//    loaderTable.appendChild(tr);
-//    for(let i=0;i<tableHeading.length;i++)
-//     {
-//         const th = document.createElement("th");
-//         th.innerText = tableHeading[i];
-//         tr.appendChild(th);
-//     }
-//     for(i=0;i<15;i++)
-//     {
-//         const tr = document.createElement("tr");
-//         loaderTable.appendChild(tr);
-//         const id = document.createElement("td");
-//         const gpa = document.createElement("td");
-//         const gpaGrade = document.createElement("td");
-//         const cgpa = document.createElement("td");
-//         const cgpaGrade = document.createElement("td");
-//         id.innerText = "";
-//         tr.appendChild(id);
-//         gpa.innerText = "";
-//         tr.appendChild(gpa);
-//         gpaGrade.innerText = "";
-//         tr.appendChild(gpaGrade);
-//         cgpa.innerText = "";
-//         tr.appendChild(cgpa);
-//         cgpaGrade.innerText = "";
-//         tr.appendChild(cgpaGrade);
-//     }
     const loader = document.getElementById("loader");
     loader.style.display = "flex";
 }
