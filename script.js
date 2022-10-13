@@ -10,6 +10,7 @@ function getCalanderID(cIdKey)
 }
 async function getReq()
 {
+    
     showLoader();
     const sheetName = getSheetName();
     const Students = await getRange(sheetName);
@@ -42,9 +43,9 @@ async function getReq()
 document.getElementById("btn").addEventListener("click",getReq);
 function getSheetName()
 {
-    const batch = document.getElementById("batch").value;
-    const year = document.getElementById("year").value;
-    const seasons = document.getElementById("seasons").value;
+    const batch = document.getElementById("batch").value.trim();
+    const year = document.getElementById("year").value.trim();
+    const seasons = document.getElementById("seasons").value.trim();
     const cIdKey = `${seasons}_${year.slice(2,4)}`;
     const CalanderID = getCalanderID(cIdKey);
     return `${CalanderID}_${batch}_${seasons}`;
@@ -112,3 +113,80 @@ function showLoader()
     const loader = document.getElementById("loader");
     loader.style.display = "flex";
 }
+
+
+// function dataValidation()
+// {
+//     var message = [];
+//     let j=0;
+//     const inputTags = document.getElementsByTagName("input");
+//     for(var i=0;i<inputTags.length;i++)
+//     {
+//         if(inputTags[i].id == "id")
+//         {
+//             if(!isNumber(inputTags[i].value))
+//             {
+//                 message[j] = "Invalid ID";
+//                 j++;
+//             }
+//         }
+//         else if(inputTags[i].id == "batch")
+//         {
+//             if(!isNumber(inputTags[i].value))
+//             {
+//                 message[j] ="Invalid Batch";
+//                 j++;
+//             }
+//         }
+//         else if(inputTags[i].id == "year")
+//         {
+//             if(!isNumber(inputTags[i].value))
+//             {
+//                 message[j] ="Invalid Year. Please Enter a Four Digit Year. Example - 2022";
+//                 j++;
+//             }
+//         }
+//         else if(inputTags[i].id == "seasons")
+//         {
+//             if(!isTrimester(inputTags[i].value))
+//             {
+//                 message[j] =`Invalid Trimester. Trimester Name must be "Spring","Summer" or "Fall"`;
+//                 j++;
+//             }
+//         }
+//     }
+//     return message;
+// }
+// function isNumber(str)
+// {
+//     for(var i=0;str.length;i++)
+//     {
+//         if(str[i]!='0' || str[i]!='1' || str[i]!='2' || str[i]!='3' || str[i]!='4' || str[i]!='5' || str[i]!='6' || str[i]!='7' || str[i]!='8' || str[i]!='9')
+//         {
+//             return 0;
+//         }
+//         else
+//         {
+//             return 1;
+//         }
+//     }
+// }
+// function isTrimester(str)
+// {
+//     if(str=="Spring")
+//     {
+//         return 1;
+//     }
+//     else if(str=="Summer")
+//     {
+//         return 1;
+//     }
+//     else if(str=="Fall")
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return 0;
+//     }
+// }

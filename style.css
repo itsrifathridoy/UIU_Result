@@ -94,7 +94,14 @@ button#reset:hover
     transform: rotate(90deg);
     transition: all 0.5s ease-in-out;
 }
-
+p{
+  text-align: center;
+  color: #fff;
+}
+p>a
+{
+  color: #00dfc4;
+}
 
 body
 {
@@ -105,7 +112,7 @@ body>#container
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 92vh;
     flex-direction: column;
     gap: 30px;
 }
@@ -214,7 +221,7 @@ table {
     display: none;
   }
   .loader {
-    height: 90vh;
+    height: 80vh;
     margin: 25px 5px;
     justify-content: center;
     align-content: center;

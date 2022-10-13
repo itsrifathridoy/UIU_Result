@@ -7,7 +7,7 @@ document.getElementById("reset").addEventListener("click",(e)=> {
 const searchBtn = document.getElementById("search");
 searchBtn.addEventListener("click",(e)=>{
     DisplayLoader();
-    const id = document.getElementById("id").value;
+    const id = document.getElementById("id").value.trim();
     const url = `https://script.google.com/macros/s/AKfycbx46TRyqp50QmkzJ91S8Gj_xc6o3_YsJ4lnzSIrul-TptKjxAA/exec?id=${id}`
     fetch(url)
         .then(d=> d.json())
