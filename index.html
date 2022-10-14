@@ -20,10 +20,9 @@
 <body onload="redirect()"> 
     <script>
         function redirect() {
-        const port = location.port;
-        const hostname = location.hostname;
+        const hostname = location.host;
         console.log(hostname);
-        const url = `http://${hostname}:${port}/trimesterResult.html`
+        const url = `http://${hostname}/trimesterResult.html`
          location.replace(url)
         }
         </script>
