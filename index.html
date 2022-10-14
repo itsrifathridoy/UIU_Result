@@ -20,10 +20,9 @@
 <body onload="redirect()"> 
     <script>
         function redirect() {
-        const hostname = location.host;
-        console.log(hostname);
-        const url = `http://${hostname}/trimesterResult.html`
-         location.replace(url)
+        const url = location.href;
+        const path = `${url}trimesterResult.html`
+         location.replace(path);
         }
         </script>
 </body>
