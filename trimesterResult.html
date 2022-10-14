@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="UIU Result - Find Any Student Result by ID, Find Trimester-Wise Result">
+    <meta name="description" content="You can search for student a result by ID. You can search whole trimester results and many features will be included in the future.">
+    <meta name="keywords" content="uiu,uiu result,ucam,uiu ucam,lms,uiu lms,elms,uiu elms,uiu scholarship,uiu waiver">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="4 days">
+    <meta name="author" content="Rifat Hridoy">
+    <meta name="og:image" content="https://itsrifathridoy.github.io/UIU_Result/meta-img.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-32.png" type="image/png">
+    <title>Trimester Result - UIU Result</title>
+</head>
+<body>
+    <!-- <div>
+        <input type="text" id="batch" placeholder="Enter Your Batch">
+        <input type="text" id="year" placeholder="Year">
+        <label for="Seasons">Which Season Result do you want?:</label>
+        <select name="Seasons" id="seasons">
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+        </select>
+        <button id="btn">Search</button>
+    </div> -->
+
+    <div id="container">
+        <img src="uiu-logo.svg" alt="UIU LOGO" srcset="">
+        <div class="inputBox">
+            <input type="number" id="batch" required="required">
+            <span>Batch Number</span>
+        </div>
+        <div class="inputBox">
+            <input type="number" id="year" required="required">
+            <span>Year</span>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="seasons" id="seasons" list="seasonList" required="required">
+            <datalist id="seasonList">
+                <option>Spring</option>
+                <option>Summer</option>
+                <option>Fall</option>
+            </datalist>
+            <span>Trimester</span>
+        </div>
+        <button id="btn">Search</button>
+        <a href="individualResult.html">Individual Result</a>
+    </div>
+    
+
+
+    <div class="loader" id="loader" role="alert" aria-busy="true" aria-label="loading">
+        <div class="lds-hourglass"></div>
+    </div>
+    <div class="head" id="head">
+        <div id="heading" class="error"></div>
+        <button class="error" id="resetbtn">Reset</button>
+    </div>
+    <div id="results" style="display: none;">
+        <div id="totalStudents"></div>
+        <button id="reset">❌</button>
+        <table border="1px" id="resultTable"> 
+        </table>
+        <button class="reset" id="resetLast">Reset</button>
+    </div>
+    <p>Made with ❤️ by <a href="https://facebook.com/itsrifathridoy">Rifat Hridoy</a></p>
+    <script src="script.js"></script>
+</body>
+</html>
