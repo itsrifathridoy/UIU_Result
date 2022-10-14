@@ -1,3 +1,6 @@
+document.getElementById("resetLast").addEventListener("click",(e)=> {
+    location.reload();
+});
 document.getElementById("resetbtn").addEventListener("click",(e)=> {
     location.reload();
 });
@@ -87,7 +90,7 @@ function showResult(NumOfStudents,d)
         const gpaGrade = document.createElement("td");
         const cgpa = document.createElement("td");
         const cgpaGrade = document.createElement("td");
-        id.innerText = d[0].data[i].id;
+        id.innerText = "0" + d[0].data[i].id;
         tr.appendChild(id);
         gpa.innerText = d[0].data[i].GPA;
         tr.appendChild(gpa);

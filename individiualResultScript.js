@@ -1,7 +1,10 @@
-document.getElementById("resetbtn").addEventListener("click",(e)=> {
+document.getElementById("resetLast").addEventListener("click",(e)=> {
     location.reload();
 });
 document.getElementById("reset").addEventListener("click",(e)=> {
+    location.reload();
+});
+document.getElementById("resetbtn").addEventListener("click",(e)=> {
     location.reload();
 });
 const searchBtn = document.getElementById("search");
@@ -14,7 +17,19 @@ searchBtn.addEventListener("click",(e)=>{
         .then(d=> {
             const loader = document.getElementById("loader");
             loader.style.display = "none";
-            displayResult(d,id);
+            if(d.status==200 && d.result.length>0)
+            {
+                displayResult(d,id);
+            }
+            else
+            {
+                document.getElementById("heading").textContent = "";
+                const resultTable = document.getElementById("resultTable");
+                resultTable.innerHTML="";
+                document.getElementById("heading").textContent =   "Result Not Found";
+                document.getElementById("head").style.display= "flex";
+            }
+            
         });
 });
 function displayResult(data,roll)
@@ -57,6 +72,7 @@ function displayResult(data,roll)
 }
 function DisplayLoader()
 {
+    document.getElementById("heading").textContent = "";
     const searchDiv = document.getElementById("container");
     searchDiv.style.display = "none";
     const resultTable = document.getElementById("resultTable");
