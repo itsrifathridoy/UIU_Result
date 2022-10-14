@@ -15,46 +15,18 @@
     <meta name="og:image" content="https://itsrifathridoy.github.io/UIU_Result/meta-img.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon-32.png" type="image/png">
-    <title>Trimester Result - UIU Result</title>
+    <title>Individual Result - UIU Result</title>
 </head>
 <body>
-    <!-- <div>
-        <input type="text" id="batch" placeholder="Enter Your Batch">
-        <input type="text" id="year" placeholder="Year">
-        <label for="Seasons">Which Season Result do you want?:</label>
-        <select name="Seasons" id="seasons">
-            <option value="Spring">Spring</option>
-            <option value="Summer">Summer</option>
-            <option value="Fall">Fall</option>
-        </select>
-        <button id="btn">Search</button>
-    </div> -->
-
     <div id="container">
-        <img src="uiu-logo.svg" alt="UIU LOGO" srcset="">
+        <img src="uiu-logo.svg" alt="UIU Logo" srcset="">
         <div class="inputBox">
-            <input type="number" id="batch" required="required">
-            <span>Batch Number</span>
+            <input type="text" id="id" required="required" maxlength="9">
+            <span>Enter Your ID</span>
         </div>
-        <div class="inputBox">
-            <input type="number" id="year" required="required">
-            <span>Year</span>
-        </div>
-        <div class="inputBox">
-            <input type="text" name="seasons" id="seasons" list="seasonList" required="required">
-            <datalist id="seasonList">
-                <option>Spring</option>
-                <option>Summer</option>
-                <option>Fall</option>
-            </datalist>
-            <span>Trimester</span>
-        </div>
-        <button id="btn">Search</button>
-        <a href="index.html">Individual Result</a>
+        <button id="search">Search</button>
+        <a href="trimesterResult.html">Full Trimester Result</a>
     </div>
-    
-
-
     <div class="loader" id="loader" role="alert" aria-busy="true" aria-label="loading">
         <div class="lds-hourglass"></div>
     </div>
@@ -70,6 +42,7 @@
         <button class="reset" id="resetLast">Reset</button>
     </div>
     <p>Made with ❤️ by <a href="https://facebook.com/itsrifathridoy">Rifat Hridoy</a></p>
-    <script src="script.js"></script>
+    
+    <script src="individiualResultScript.js"></script>
 </body>
 </html>
